@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall of Fame Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+        <img src="assets/hall-of-fame-logo.png" alt="Hall of Fame Logo" class="main-logo" />
+        <img src="assets/company-logo.png" alt="Company Logo" class="company-logo" />        
+    </div>
+   
+    
+    <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch">
+          <span class="slider round"></span>
+        </label>
+        <span id="theme-label">Dark Mode</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#isro">ISRO</a></li>
+      <li><a href="index.html#itca">ITCA</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="index.html#events">Events</a></li>
+      <li><a href="index.html#news">News</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Search and Filter Bar -->
+  <div class="search-filter-container">
+    <input type="text" id="searchInput" placeholder="Search by name..." />
+    <select id="orgFilter">
+      <option value="">All Organizations</option>
+      <option value="ISRO">ISRO</option>
+      <option value="ITCA">ITCA</option>
+      <option value="DRDO">DRDO</option>
+    </select>
+    <select id="contributionFilter">
+      <option value="">All Contributions</option>
+      <option value="Satellites">Satellites</option>
+      <option value="Missions">Missions</option>
+      <option value="Leadership">Leadership</option>
+    </select>
+  </div>
+   <h1>Hall of Fame for the Space Fraternity</h1>
+    <p class="description">
+        Welcome to the Hall of Fame – an interactive archive honoring India's most brilliant minds in space science. Discover their achievements, timelines, and contributions to the nation’s space journey.
+    </p>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Hall of Fame. All Rights Reserved.</p>
+  </footer>
+  <div class="stars"></div>
+  <div class="planets"></div>
+
+  <script src="js/profiles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
