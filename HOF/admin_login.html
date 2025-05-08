@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Login - Global Space Hall of Fame</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login_signup.css" />
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="site-title">Admin Login</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">User Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login-form">
+            <form id="adminLoginForm" method="POST" action="api/admin_login.php">
+                <label for="username">Admin Username or Email:</label>
+                <input type="text" id="username" name="username" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const adminLoginForm = document.getElementById('adminLoginForm');
+        adminLoginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(adminLoginForm);
+            const response = await fetch('api/admin_login.php', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            if (result.success) {
+                alert('Admin login successful! Welcome ' + result.username);
+                window.location.href = 'admin.php';
+            } else {
+                alert('Error: ' + result.error);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/events.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Hall of Fame</a>
+            <ul class="nav-links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="isro.html">ISRO</a></li>
+                <li><a href="itca.html">ITCA</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode" style="font-size: 1.5rem; margin-left: 20px; cursor: pointer;">🌙</button>
+        </nav>
+    </header>
+    <h1>Events</h1>
+    <div class="tabs">
+        <button class="tab-button active" data-tab="competition">Competitions</button>
+        <button class="tab-button" data-tab="webinar">Webinars</button>
+        <button class="tab-button" data-tab="college_event">College Events</button>
+    </div>
+    <div class="filter-sort-container">
+        <select id="sort-select">
+            <option value="">Sort by</option>
+            <option value="title-asc">Title (A-Z)</option>
+            <option value="title-desc">Title (Z-A)</option>
+            <option value="date-asc">Date (Oldest First)</option>
+            <option value="date-desc">Date (Newest First)</option>
+        </select>
+    </div>
+    <div id="tab-content" class="tab-content">
+        <!-- Event cards will be rendered here -->
+    </div>
+    <div id="pagination" class="pagination-container">
+        <!-- Pagination buttons will be dynamically inserted here -->
+    </div>
+
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

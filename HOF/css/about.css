@@ -1,0 +1,85 @@
+/* About page specific styles */
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f5f8fa;
+    color: #f5f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header, .site-footer {
+    background-color: #30424d;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Removed navbar and nav-links styles to use global styles from style.css */
+
+/* Retain only page-specific styles */
+
+.content-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+    font-size: 2rem; /* Increased font size */
+    line-height: 1.9;
+}
+
+h2 {
+    color: #ffffff; /* Changed to white for better visibility */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+h1{
+    color: #f5f0f0;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #f9f2f2;
+}
+
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpAnim 0.8s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUpAnim {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content-container {
+        margin: 20px 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,86 @@
+/* Profile page specific styles */
+
+.profile-pic {
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+#preview-img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.profile-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.scientist-card {
+    width: 380px;
+    background-color: #f0f0f0;
+    color: #000000;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.scientist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 82, 136, 0.2);
+}
+
+.scientist-card * {
+    color: #000000;
+}
+
+.scientist-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px 0;
+}
+
+.scientist-card p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.profile-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+    color: #333333;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #999999;
+    transition: color 0.3s ease;
+}
+
+.favorite-btn.favorited {
+    color: gold;
+}

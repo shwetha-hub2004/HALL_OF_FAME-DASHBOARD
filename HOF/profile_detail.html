@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scientist Profile Detail</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/profile_detail.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.php" class="logo">Hall of Fame</a>
+            <ul class="nav-links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="isro.html">ISRO</a></li>
+                <li><a href="itca.html">ITCA</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode" style="font-size: 1.5rem; margin-left: 20px; cursor: pointer;">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <div class="back-button-container">
+            <a href="profile.html" class="back-to-profile-btn">← Back to Profile</a>
+        </div>
+        <div id="profile-container" class="content-container">
+            <p>Loading profile...</p>
+        </div>
+    </main>
+
+    <!-- Lightbox modal -->
+    <div id="lightbox" class="lightbox" style="display:none;">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" />
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/profile.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

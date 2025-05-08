@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scientist Profile</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.php" class="logo">Hall of Fame</a>
+            <ul class="nav-links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="isro.html">ISRO</a></li>
+                <li><a href="itca.html">ITCA</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode" style="font-size: 1.5rem; margin-left: 20px; cursor: pointer;">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Profiles</h1>
+        <div class="filter-container">
+            <input type="text" id="search-input" placeholder="Search scientists by name..." />
+            <select id="filter-select">
+                <option value="">Filter by Country/Organization</option>
+            </select>
+            <select id="sort-select">
+                <option value="">Sort by</option>
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="country-asc">Country (A-Z)</option>
+                <option value="country-desc">Country (Z-A)</option>
+            </select>
+            <button id="clear-filters">Clear</button>
+        </div>
+        <div id="loading-spinner"></div>
+        <div id="scientist-cards" class="profile-cards-container">
+            <!-- Scientist cards will be dynamically inserted here -->
+        </div>
+        <div id="pagination" class="pagination-container">
+            <!-- Pagination buttons will be dynamically inserted here -->
+        </div>
+    </main>
+    <script src="js/profile_list.js"></script>
+
+    <!-- Lightbox modal -->
+    <div id="lightbox" class="lightbox" style="display:none;">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" />
+        <div id="caption"></div>
+    </div>
+
+    <!-- Quick preview modal -->
+    <div id="quick-preview-modal" style="display:none;">
+        <span class="close-btn">&times;</span>
+        <img id="preview-img" src="" alt="Preview Image" />
+        <h3 id="preview-name"></h3>
+        <p id="preview-country"></p>
+        <p id="preview-organization"></p>
+        <a id="preview-profile-link" href="#" class="profile-link">View Full Profile</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

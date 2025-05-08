@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Favorite Scientists</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Hall of Fame</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="isro.html">ISRO</a></li>
+                <li><a href="itca.html">ITCA</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="favorites.html" class="active">Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode" style="font-size: 1.5rem; margin-left: 20px; cursor: pointer;">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Favorite Scientists</h1>
+        <div id="favorite-cards" class="profile-cards-container">
+            <!-- Favorite scientist cards will be dynamically inserted here -->
+        </div>
+        <div id="no-favorites-message" style="text-align:center; margin-top:20px; display:none;">
+            <p>You have no favorite scientists yet.</p>
+        </div>
+    </main>
+    <script src="js/favorites.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* Extra styles for profile detail page to center align all fonts */
+
+#profile-container, 
+#profile-container * {
+    text-align: center !important;
+}
